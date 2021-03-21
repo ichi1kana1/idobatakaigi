@@ -1,5 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import { Grid, Avatar } from '@material-ui/core';
 
 const useStyles = makeStyles({
     root: {
@@ -10,7 +11,15 @@ const useStyles = makeStyles({
 const MessageInputField = () => {
     const classes = useStyles();
     return (
-    <div className={classes.root}>MessageInputField</div>
+    <div className={classes.root}>
+        <Grid container >
+            <Grid xs={1}>
+                <Avatar />
+            </Grid>
+            <Grid xs={10}>入力</Grid>
+            <Grid xs={1}>ボタン</Grid>
+        </Grid>
+    </div>
     );
 };
 export default MessageInputField;
