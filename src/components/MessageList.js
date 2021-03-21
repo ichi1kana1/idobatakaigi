@@ -13,7 +13,10 @@ const MessageList = () => {
     const classes = useStyles();
 
     useEffect(() => {
-        messagesRef.orderByKey().limitToLast(3).on('value', (snapshot) => {
+        messagesRef
+        .orderByKey()
+        .limitToLast(3)
+        .on('value', (snapshot) => {
             const messages = snapshot.val();
             if ( messages === null ) return;
             const entries = Object.entries(messages);
